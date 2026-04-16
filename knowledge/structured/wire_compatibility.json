@@ -1,0 +1,61 @@
+{
+  "solid_core": {
+    "sizes_inches": [
+      "0.025",
+      "0.030",
+      "0.035"
+    ],
+    "groove_type": "V-groove",
+    "materials": [
+      "Mild Steel",
+      "Stainless Steel",
+      "Aluminum (with optional Spool Gun)"
+    ],
+    "shielding_gas_required": true
+  },
+  "flux_cored": {
+    "sizes_inches": [
+      "0.030",
+      "0.035",
+      "0.045"
+    ],
+    "groove_type": "knurled",
+    "materials": [
+      "Mild Steel",
+      "Stainless Steel"
+    ],
+    "shielding_gas_required": false
+  },
+  "feed_roller_markings": [
+    {
+      "groove_side": "V-groove",
+      "label": "0.025 groove",
+      "fits_sizes_inches": [
+        "0.025"
+      ]
+    },
+    {
+      "groove_side": "V-groove",
+      "label": "0.030/0.035 groove",
+      "fits_sizes_inches": [
+        "0.030",
+        "0.035"
+      ]
+    },
+    {
+      "groove_side": "knurled",
+      "label": "0.030/0.035 groove",
+      "fits_sizes_inches": [
+        "0.030",
+        "0.035"
+      ]
+    },
+    {
+      "groove_side": "knurled",
+      "label": "0.045 groove",
+      "fits_sizes_inches": [
+        "0.045"
+      ]
+    }
+  ]
+}

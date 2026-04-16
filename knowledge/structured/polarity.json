@@ -1,0 +1,51 @@
+[
+  {
+    "process": "mig",
+    "label": "DCEP",
+    "label_full": "Direct Current Electrode Positive",
+    "ground_clamp_socket": "negative",
+    "work_cable_name": "MIG gun / wire feed power",
+    "work_cable_socket": "positive",
+    "notes": "Used for solid-core (gas shielded) MIG welding. Plug Ground Clamp Cable into Negative (–) Socket and Wire Feed Power Cable into Positive (+) Socket. Twist cables clockwise to lock. Same DCEP polarity is used when connecting an optional Spool Gun (see page 17).",
+    "source_pages": [
+      14,
+      17
+    ]
+  },
+  {
+    "process": "flux_cored",
+    "label": "DCEN",
+    "label_full": "Direct Current Electrode Negative",
+    "ground_clamp_socket": "positive",
+    "work_cable_name": "Wire feed power (MIG gun cable)",
+    "work_cable_socket": "negative",
+    "notes": "Used for flux-cored (gasless) self-shielded welding. Plug Ground Clamp Cable into Positive (+) Socket and Wire Feed Power Cable into Negative (–) Socket. Twist cables clockwise to lock.",
+    "source_pages": [
+      13
+    ]
+  },
+  {
+    "process": "tig",
+    "label": "DCEN",
+    "label_full": "Direct Current Electrode Negative",
+    "ground_clamp_socket": "positive",
+    "work_cable_name": "TIG torch",
+    "work_cable_socket": "negative",
+    "notes": "Plug Ground Clamp Cable into Positive (+) Socket and TIG Torch Cable into Negative (–) Socket. Twist clockwise to lock. Shielding gas (100% Argon) is required; foot pedal is optional.",
+    "source_pages": [
+      24
+    ]
+  },
+  {
+    "process": "stick",
+    "label": "DCEP",
+    "label_full": "Direct Current Electrode Positive",
+    "ground_clamp_socket": "negative",
+    "work_cable_name": "Electrode holder (stinger)",
+    "work_cable_socket": "positive",
+    "notes": "Plug Ground Clamp Cable into Negative (–) Socket and Electrode Holder Cable into Positive (+) Socket. Twist clockwise to lock. No shielding gas required. Note: some stick electrodes may require reversed (DCEN) polarity — always follow the electrode manufacturer's recommendation.",
+    "source_pages": [
+      27
+    ]
+  }
+]

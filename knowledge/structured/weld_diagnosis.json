@@ -1,0 +1,556 @@
+[
+  {
+    "id": "wire_good_weld",
+    "process_family": "wire",
+    "category": "baseline",
+    "view": "top",
+    "label": "Good Weld",
+    "visual_signature": "Uniform, evenly-spaced ripple pattern forming a consistent, moderately-wide stringer bead. The bead crown is slightly rounded and symmetric with smooth tie-in at both toes. No porosity pits, minimal spatter, and a clean bullet-shaped leading edge where the arc stopped. Profile view shows a low, evenly-domed cap sitting flush on the base metal.",
+    "fix_summary": "No correction needed — this is the target appearance.",
+    "fix_details": [
+      "Maintain current voltage and wire feed speed.",
+      "Keep travel speed steady.",
+      "Keep CTWD less than 1/2\".",
+      "Verify correct polarity for the process."
+    ],
+    "source_page": 35,
+    "page_image_ref": "knowledge/pages/owner_manual/p035.png"
+  },
+  {
+    "id": "wire_voltage_too_low",
+    "process_family": "wire",
+    "category": "heat_control",
+    "view": "top",
+    "label": "Voltage Too Low or Wire Feed Too Slow",
+    "visual_signature": "Narrow, tall, ropy bead that sits high on the surface like a piled-up string of solder. The crown is convex and humped (not flattened), with poor wetting at the toes — the edges of the bead do not blend smoothly into the base metal. Ripple pattern is tight and pinched. Profile view shows a very rounded, almost ball-like cap rather than a spread-out bead.",
+    "fix_summary": "Increase output voltage or increase wire feed speed.",
+    "fix_details": [
+      "Increase output voltage.",
+      "Or increase wire feed speed."
+    ],
+    "source_page": 35,
+    "page_image_ref": "knowledge/pages/owner_manual/p035.png"
+  },
+  {
+    "id": "wire_voltage_too_high",
+    "process_family": "wire",
+    "category": "heat_control",
+    "view": "top",
+    "label": "Voltage Too High or Wire Feed Too Fast",
+    "visual_signature": "Wide, flat bead with an irregular, washed-out shape. Surface shows scattered porosity pits and lots of small spatter balls around the weld. The bead edges are ragged and the arc footprint at the leading edge is oversized. Profile view shows a broad, low, flat cap that spreads beyond the intended joint.",
+    "fix_summary": "Decrease output voltage or decrease wire feed speed.",
+    "fix_details": [
+      "Decrease output voltage.",
+      "Or decrease wire feed speed."
+    ],
+    "source_page": 35,
+    "page_image_ref": "knowledge/pages/owner_manual/p035.png"
+  },
+  {
+    "id": "wire_travel_speed_too_fast",
+    "process_family": "wire",
+    "category": "travel_speed",
+    "view": "top",
+    "label": "Travel Speed Too Fast",
+    "visual_signature": "Thin, narrow bead that looks stretched out and skinny relative to its length. Ripples are elongated and pulled in the direction of travel. The bead crown is low and lacks fill; toes may undercut the base metal. Profile view shows a small, low-profile deposit with insufficient reinforcement.",
+    "fix_summary": "Travel slower.",
+    "fix_details": [
+      "Slow down the travel speed and keep it steady."
+    ],
+    "source_page": 35,
+    "page_image_ref": "knowledge/pages/owner_manual/p035.png"
+  },
+  {
+    "id": "wire_travel_speed_too_slow",
+    "process_family": "wire",
+    "category": "travel_speed",
+    "view": "top",
+    "label": "Travel Speed Too Slow",
+    "visual_signature": "Excessively wide, heavy bead with a lot of deposited material piled up. The bead looks bulky and oversized for the joint, with a broad heat-affected zone discolored around it. Ripples are compressed and close together. Profile shows a tall, wide cap that may sag and over-penetrate.",
+    "fix_summary": "Travel faster.",
+    "fix_details": [
+      "Increase the travel speed and keep it steady."
+    ],
+    "source_page": 35,
+    "page_image_ref": "knowledge/pages/owner_manual/p035.png"
+  },
+  {
+    "id": "wire_ctwd_too_long_or_wrong_polarity",
+    "process_family": "wire",
+    "category": "polarity_or_ctwd",
+    "view": "top",
+    "label": "CTWD Too Long or Wrong Polarity",
+    "visual_signature": "Bead with heavy, coarse spatter scattered all around it in large droplets. The bead itself is irregular, bumpy, and lumpy with poor ripple formation and inconsistent width. Arc appears to have been unstable — surface looks rough and pock-marked with many small pits.",
+    "fix_summary": "Check polarity and maintain less than 1/2\" CTWD.",
+    "fix_details": [
+      "Verify polarity is correct (DCEP for solid wire with gas, DCEN for flux-cored self-shielded).",
+      "Keep contact-tip-to-work distance under 1/2\"."
+    ],
+    "source_page": 35,
+    "page_image_ref": "knowledge/pages/owner_manual/p035.png"
+  },
+  {
+    "id": "wire_inadequate_penetration",
+    "process_family": "wire",
+    "category": "penetration",
+    "view": "profile",
+    "label": "Inadequate Penetration",
+    "visual_signature": "Cross-section profile shows a small, shallow weld nugget that sits on top of the joint without fusing down into it. Weld only bonds at the surface; the root of the joint is unfused and clearly visible as an unfilled seam below the bead.",
+    "fix_summary": "Increase heat — more current, slower travel, faster wire, or shorter CTWD.",
+    "fix_details": [
+      "Increase weld current.",
+      "Decrease travel speed.",
+      "Use faster wire feed.",
+      "Use shorter CTWD."
+    ],
+    "source_page": 35,
+    "page_image_ref": "knowledge/pages/owner_manual/p035.png"
+  },
+  {
+    "id": "wire_proper_penetration",
+    "process_family": "wire",
+    "category": "penetration",
+    "view": "profile",
+    "label": "Proper Penetration",
+    "visual_signature": "Cross-section profile shows the weld fully fusing both workpieces with a moderate root reinforcement visible underneath and a slight, evenly-domed cap on top. The weld metal penetrates into the joint forming a clean V or U of fusion through the full thickness.",
+    "fix_summary": "No correction needed — ideal heat input.",
+    "fix_details": [
+      "Maintain current settings, travel speed, wire speed, and CTWD."
+    ],
+    "source_page": 35,
+    "page_image_ref": "knowledge/pages/owner_manual/p035.png"
+  },
+  {
+    "id": "wire_excess_penetration_or_burn_through",
+    "process_family": "wire",
+    "category": "penetration",
+    "view": "profile",
+    "label": "Excess Penetration or Burn-Through",
+    "visual_signature": "Cross-section profile shows the weld drooping or sagging on both top and bottom of the joint. The underside shows a large bulging protrusion or an actual hole where the base metal has melted completely through. The top may appear collapsed or concave.",
+    "fix_summary": "Reduce heat — less current, faster travel, slower wire, or longer CTWD.",
+    "fix_details": [
+      "Decrease weld current.",
+      "Increase travel speed.",
+      "Use slower wire feed.",
+      "Use longer CTWD."
+    ],
+    "source_page": 35,
+    "page_image_ref": "knowledge/pages/owner_manual/p035.png"
+  },
+  {
+    "id": "wire_bend_at_joint",
+    "process_family": "wire",
+    "category": "bend",
+    "view": "profile",
+    "label": "Bend at Joint (Wire)",
+    "visual_signature": "Profile view of a butt weld where the two workpieces are no longer flat/coplanar — they have pulled up toward the weld, forming a visible V-shape or kink at the joint due to distortion from heat. The weld itself sits at the apex of the bend.",
+    "fix_summary": "Clamp workpieces better and manage heat with shorter welds / faster travel.",
+    "fix_details": [
+      "Clamp workpieces securely.",
+      "Make tack welds to hold workpieces.",
+      "Weld a small portion and allow to cool before proceeding.",
+      "Increase travel speed.",
+      "Reduce wire feed speed."
+    ],
+    "source_page": 36,
+    "page_image_ref": "knowledge/pages/owner_manual/p036.png"
+  },
+  {
+    "id": "wire_coat_of_slag_over_weld",
+    "process_family": "wire",
+    "category": "slag",
+    "view": "top",
+    "label": "Coat of Slag Over Weld (Wire)",
+    "visual_signature": "Top view of a flux-cored weld where a dark, glassy/crusty slag layer covers the bead. Shown partially chipped away — the lifted slag reveals the clean rippled weld metal underneath. Slag is dull, grey-to-black, and brittle in appearance.",
+    "fix_summary": "Normal for flux-cored — chip off with hammer and wire-brush after welding.",
+    "fix_details": [
+      "Slag is a necessary part of a flux-cored wire weld; it shields the weld from impurities.",
+      "Clean off the slag with a Chipping Hammer and Wire Brush after welding.",
+      "Gas-shielded MIG welds are protected by shielding gas and do not need slag."
+    ],
+    "source_page": 36,
+    "page_image_ref": "knowledge/pages/owner_manual/p036.png"
+  },
+  {
+    "id": "wire_weld_not_adhering_properly",
+    "process_family": "wire",
+    "category": "adhesion",
+    "view": "profile",
+    "label": "Weld Not Adhering Properly (Wire)",
+    "visual_signature": "Profile cross-section of a fillet/groove joint where gaps or voids are visible between the weld metal and the base material at the top toe and at the root. The weld metal has pulled away from the workpiece surfaces instead of fusing into them, leaving crescent-shaped unfused seams.",
+    "fix_summary": "Increase heat/fill, clean workpiece, and correct technique.",
+    "fix_details": [
+      "Place stringer bead at correct place in joint.",
+      "Adjust workpiece position or weld angle to permit proper welding to bottom of piece.",
+      "Pause briefly at sides during weave bead.",
+      "Keep arc on leading edge of weld puddle.",
+      "Hold MIG Gun at proper angles.",
+      "Increase current and increase wire feed speed.",
+      "Clean workpiece down to bare metal.",
+      "Widen groove or increase bevel."
+    ],
+    "source_page": 36,
+    "page_image_ref": "knowledge/pages/owner_manual/p036.png"
+  },
+  {
+    "id": "wire_porosity",
+    "process_family": "wire",
+    "category": "porosity",
+    "view": "top",
+    "label": "Wire Weld — Porosity",
+    "visual_signature": "Top view of a bead with small round holes and pits (cavities) scattered across its surface, giving a pock-marked or Swiss-cheese appearance. The ripple pattern is otherwise normal, but gas bubbles have left craters in the crown of the weld.",
+    "fix_summary": "Check polarity/gas/CTWD and clean the workpiece and wire.",
+    "fix_details": [
+      "Verify polarity is correct for type of welding.",
+      "Increase shielding gas flow; clean nozzle; maintain proper CTWD.",
+      "Use shielding gas recommended by wire supplier.",
+      "Clean workpiece down to bare metal; ensure wire is free of oil and residue.",
+      "Maintain steady travel speed.",
+      "Reduce CTWD."
+    ],
+    "source_page": 37,
+    "page_image_ref": "knowledge/pages/owner_manual/p037.png"
+  },
+  {
+    "id": "wire_excessive_spatter",
+    "process_family": "wire",
+    "category": "spatter",
+    "view": "top",
+    "label": "Wire Weld — Excessive Spatter",
+    "visual_signature": "Top view of a bead surrounded by a heavy scattering of large, coarse, grainy spatter balls along both sides of the weld. The spatter is much larger and more abundant than the fine dusting considered normal — clearly visible droplets stuck to the base metal.",
+    "fix_summary": "Clean parts, verify polarity and gas, reduce wire speed and CTWD.",
+    "fix_details": [
+      "Clean workpiece down to bare metal; ensure wire is clean.",
+      "Verify polarity is correct for type of welding.",
+      "Increase shielding gas flow; clean nozzle; maintain proper CTWD.",
+      "Reduce wire feed speed.",
+      "Reduce CTWD."
+    ],
+    "source_page": 37,
+    "page_image_ref": "knowledge/pages/owner_manual/p037.png"
+  },
+  {
+    "id": "wire_crooked_wavy_bead",
+    "process_family": "wire",
+    "category": "wavy_bead",
+    "view": "top",
+    "label": "Wire Weld — Crooked/Wavy Bead",
+    "visual_signature": "Top view of a bead that wanders side to side instead of tracking in a straight line. The ripple pattern is intact, but the overall path of the weld is snake-like or wavy, showing unsteady hand/torch movement.",
+    "fix_summary": "Steady your hand, maintain steady travel, shorten CTWD.",
+    "fix_details": [
+      "Use two hands or rest hand on a steady surface.",
+      "Maintain steady travel speed.",
+      "Reduce CTWD."
+    ],
+    "source_page": 37,
+    "page_image_ref": "knowledge/pages/owner_manual/p037.png"
+  },
+  {
+    "id": "wire_burn_through",
+    "process_family": "wire",
+    "category": "burn_through",
+    "view": "top",
+    "label": "Wire Weld — Burn-Through",
+    "visual_signature": "Top view of a bead with a large open hole in the middle or along the length where the base metal has fully melted away. The surrounding weld metal is discolored and the hole is jagged and irregularly shaped.",
+    "fix_summary": "Reduce heat input and increase travel speed.",
+    "fix_details": [
+      "Reduce current and/or wire feed speed.",
+      "Increase travel speed and keep it steady.",
+      "Reduce wire feed speed (excessive material at weld)."
+    ],
+    "source_page": 37,
+    "page_image_ref": "knowledge/pages/owner_manual/p037.png"
+  },
+  {
+    "id": "stick_good_weld",
+    "process_family": "stick",
+    "category": "baseline",
+    "view": "top",
+    "label": "Good Weld (Stick)",
+    "visual_signature": "Straight, uniform stick bead with even, tightly-spaced ripples across its full length. The bead has consistent width, smooth wetting at both toes, and a moderately domed crown. No undercut, no pits, minimal spatter. The metal has a clean silvery-grey look after slag removal.",
+    "fix_summary": "No correction needed.",
+    "fix_details": [
+      "Maintain current setting, travel speed, arc length, and electrode angle."
+    ],
+    "source_page": 38,
+    "page_image_ref": "knowledge/pages/owner_manual/p038.png"
+  },
+  {
+    "id": "stick_current_too_low",
+    "process_family": "stick",
+    "category": "heat_control",
+    "view": "top",
+    "label": "Current Too Low",
+    "visual_signature": "Narrow, tall, ropy stick bead that sits high on the plate with poor wetting at the toes. The crown is very convex and the bead looks piled-up and pinched. Fusion to the base metal appears poor — edges do not tie in smoothly.",
+    "fix_summary": "Increase the current.",
+    "fix_details": [
+      "Increase weld current."
+    ],
+    "source_page": 38,
+    "page_image_ref": "knowledge/pages/owner_manual/p038.png"
+  },
+  {
+    "id": "stick_current_too_high",
+    "process_family": "stick",
+    "category": "heat_control",
+    "view": "top",
+    "label": "Current Too High",
+    "visual_signature": "Wide, flat stick bead with heavy distortion and a rough, rippled, burnt-looking surface. The surrounding plate shows a large discolored heat-affected zone. Bead may show undercut along the edges and an irregular, violent ripple pattern.",
+    "fix_summary": "Decrease the current.",
+    "fix_details": [
+      "Decrease weld current."
+    ],
+    "source_page": 38,
+    "page_image_ref": "knowledge/pages/owner_manual/p038.png"
+  },
+  {
+    "id": "stick_weld_speed_too_fast",
+    "process_family": "stick",
+    "category": "travel_speed",
+    "view": "top",
+    "label": "Weld Speed Too Fast (Stick)",
+    "visual_signature": "Thin, narrow stick bead that is stretched out, with elongated ripples pulled in the direction of travel. The bead is low-profile with insufficient reinforcement and may show pointed or undercut toes.",
+    "fix_summary": "Weld slower.",
+    "fix_details": [
+      "Slow down the travel speed and keep it steady."
+    ],
+    "source_page": 38,
+    "page_image_ref": "knowledge/pages/owner_manual/p038.png"
+  },
+  {
+    "id": "stick_weld_speed_too_slow",
+    "process_family": "stick",
+    "category": "travel_speed",
+    "view": "top",
+    "label": "Weld Speed Too Slow (Stick)",
+    "visual_signature": "Wide, heavy stick bead with excessive build-up of deposited metal. Bead is broader than needed, ripples are closely bunched together, and a wide discolored heat-affected zone surrounds the weld.",
+    "fix_summary": "Weld faster.",
+    "fix_details": [
+      "Increase the travel speed and keep it steady."
+    ],
+    "source_page": 38,
+    "page_image_ref": "knowledge/pages/owner_manual/p038.png"
+  },
+  {
+    "id": "stick_arc_length_too_short",
+    "process_family": "stick",
+    "category": "arc_length",
+    "view": "top",
+    "label": "Arc Length Too Short",
+    "visual_signature": "Stick bead that is narrow and irregular with signs of electrode sticking — uneven ripple spacing, possible stubs or restart marks along its length. The bead is tall and ropy similar to a cold weld, with poor spread.",
+    "fix_summary": "Increase distance (hold electrode slightly further from the work).",
+    "fix_details": [
+      "Lift the electrode slightly so arc length equals the diameter of the bare metal end of the electrode."
+    ],
+    "source_page": 38,
+    "page_image_ref": "knowledge/pages/owner_manual/p038.png"
+  },
+  {
+    "id": "stick_arc_length_too_long",
+    "process_family": "stick",
+    "category": "arc_length",
+    "view": "top",
+    "label": "Arc Length Too Long",
+    "visual_signature": "Wide, rough stick bead with heavy spatter scattered around it and a very irregular, pock-marked surface. The bead profile is low and flat, ripples are washed-out, and porosity may be visible. Arc appears to have been unstable.",
+    "fix_summary": "Decrease distance (hold electrode closer to the work).",
+    "fix_details": [
+      "Lower the electrode so arc length equals the diameter of the bare metal end of the electrode."
+    ],
+    "source_page": 38,
+    "page_image_ref": "knowledge/pages/owner_manual/p038.png"
+  },
+  {
+    "id": "stick_inadequate_penetration",
+    "process_family": "stick",
+    "category": "penetration",
+    "view": "profile",
+    "label": "Inadequate Penetration (Stick)",
+    "visual_signature": "Cross-section showing a shallow stick weld deposit sitting on top of the joint without fusing into the root. The seam between the two pieces is still clearly visible beneath the bead.",
+    "fix_summary": "Increase heat — more current, slower travel, add fill, bevel thick stock.",
+    "fix_details": [
+      "Keep arc on leading edge of weld puddle.",
+      "Hold torch/electrode at proper angles.",
+      "Slow down so fill material has time to melt into the weld.",
+      "Increase current.",
+      "Bevel thick workpieces, allow slight gap, weld in several passes.",
+      "Increase amount of fill material."
+    ],
+    "source_page": 38,
+    "page_image_ref": "knowledge/pages/owner_manual/p038.png"
+  },
+  {
+    "id": "stick_proper_penetration",
+    "process_family": "stick",
+    "category": "penetration",
+    "view": "profile",
+    "label": "Proper Penetration (Stick)",
+    "visual_signature": "Cross-section showing full fusion through the joint with a slight root reinforcement visible on the underside and a moderate, evenly-domed cap on top. Weld metal is well-tied into both workpieces.",
+    "fix_summary": "No correction needed.",
+    "fix_details": [
+      "Maintain current settings, travel speed, and electrode angle."
+    ],
+    "source_page": 38,
+    "page_image_ref": "knowledge/pages/owner_manual/p038.png"
+  },
+  {
+    "id": "stick_excess_penetration_or_burn_through",
+    "process_family": "stick",
+    "category": "penetration",
+    "view": "profile",
+    "label": "Excess Penetration or Burn-Through (Stick)",
+    "visual_signature": "Cross-section with weld drooping on top and an exaggerated bulge or through-hole on the underside of the joint. Base metal has melted excessively, leaving a collapsed or perforated weld.",
+    "fix_summary": "Reduce heat — less current, faster travel.",
+    "fix_details": [
+      "Reduce current.",
+      "Increase welding speed and keep it steady."
+    ],
+    "source_page": 38,
+    "page_image_ref": "knowledge/pages/owner_manual/p038.png"
+  },
+  {
+    "id": "stick_weld_not_adhering_properly",
+    "process_family": "stick",
+    "category": "adhesion",
+    "view": "profile",
+    "label": "Stick Weld — Weld Not Adhering Properly",
+    "visual_signature": "Cross-section of a groove/fillet joint showing gaps between the weld metal and the base material at the top toe and at the root. Weld bead has failed to fuse into the sidewalls, leaving crescent-shaped voids.",
+    "fix_summary": "Increase heat/fill, clean, and correct technique.",
+    "fix_details": [
+      "Place stringer bead at correct place in joint.",
+      "Adjust workpiece position or weld angle to permit proper welding to bottom of piece.",
+      "Keep arc on leading edge of weld puddle.",
+      "Hold electrode and fill material at proper angles.",
+      "Increase current.",
+      "Clean workpiece down to bare metal.",
+      "Increase amount of fill material.",
+      "Decrease distance between workpieces and increase bevel."
+    ],
+    "source_page": 39,
+    "page_image_ref": "knowledge/pages/owner_manual/p039.png"
+  },
+  {
+    "id": "stick_bend_at_joint",
+    "process_family": "stick",
+    "category": "bend",
+    "view": "profile",
+    "label": "Stick Weld — Bend at Joint",
+    "visual_signature": "Profile view showing the two workpieces tilted upward toward the weld, forming a visible V-bend or angular kink at the joint caused by heat-induced distortion.",
+    "fix_summary": "Clamp better and manage heat.",
+    "fix_details": [
+      "Clamp workpieces securely.",
+      "Make tack welds to hold workpieces.",
+      "Weld a small portion and allow to cool before proceeding.",
+      "Increase weld speed."
+    ],
+    "source_page": 39,
+    "page_image_ref": "knowledge/pages/owner_manual/p039.png"
+  },
+  {
+    "id": "stick_coat_of_slag_over_weld",
+    "process_family": "stick",
+    "category": "slag",
+    "view": "top",
+    "label": "Stick Weld — Coat of Slag Over Weld",
+    "visual_signature": "Top view of a stick bead covered by a dark, glassy, crusty slag layer. Shown partially chipped away to reveal the clean rippled weld metal underneath. Slag appears dull, grey-to-black, and flakes off in shards.",
+    "fix_summary": "Normal — chip off slag with hammer and wire-brush after welding.",
+    "fix_details": [
+      "Slag is a necessary part of a stick weld; it shields the weld from impurities.",
+      "Clean off the slag with the Chipping Hammer and Wire Brush after welding."
+    ],
+    "source_page": 40,
+    "page_image_ref": "knowledge/pages/owner_manual/p040.png"
+  },
+  {
+    "id": "stick_porosity",
+    "process_family": "stick",
+    "category": "porosity",
+    "view": "top",
+    "label": "Stick Weld — Porosity",
+    "visual_signature": "Top view of a stick bead showing small round holes and pits scattered across its surface, giving a pock-marked appearance. The ripple pattern is otherwise intact but interrupted by gas-bubble craters.",
+    "fix_summary": "Clean parts and maintain steady travel speed.",
+    "fix_details": [
+      "Clean workpiece down to bare metal.",
+      "Ensure fill material and electrode are clean and free from oil, coatings, and other residues.",
+      "Maintain steady weld speed."
+    ],
+    "source_page": 40,
+    "page_image_ref": "knowledge/pages/owner_manual/p040.png"
+  },
+  {
+    "id": "stick_crooked_wavy_bead",
+    "process_family": "stick",
+    "category": "wavy_bead",
+    "view": "top",
+    "label": "Stick Weld — Crooked/Wavy Bead",
+    "visual_signature": "Top view of a stick bead that snakes side-to-side along its length instead of running straight. Ripples are intact but the path of the bead is wavy due to unsteady electrode movement.",
+    "fix_summary": "Steady your hand and maintain steady speed.",
+    "fix_details": [
+      "Use two hands or rest hand on a steady surface.",
+      "Maintain steady weld speed."
+    ],
+    "source_page": 40,
+    "page_image_ref": "knowledge/pages/owner_manual/p040.png"
+  },
+  {
+    "id": "stick_excessive_spatter",
+    "process_family": "stick",
+    "category": "spatter",
+    "view": "top",
+    "label": "Stick Weld — Excessive Spatter",
+    "visual_signature": "Top view of a stick bead surrounded by coarse, grainy, large spatter droplets stuck to the base metal on both sides. Spatter is much larger than the fine dusting that is considered normal.",
+    "fix_summary": "Clean the workpiece and fill material.",
+    "fix_details": [
+      "Clean workpiece down to bare metal.",
+      "Ensure fill material and electrode are clean and free from oil, coatings, and other residues."
+    ],
+    "source_page": 40,
+    "page_image_ref": "knowledge/pages/owner_manual/p040.png"
+  },
+  {
+    "id": "stick_burn_through",
+    "process_family": "stick",
+    "category": "burn_through",
+    "view": "top",
+    "label": "Stick Weld — Burn-Through",
+    "visual_signature": "Top view of a stick bead with a large open hole along its length where the base metal has melted away entirely. Surrounding area is heavily discolored and the hole is irregularly shaped with ragged edges.",
+    "fix_summary": "Reduce heat and increase speed.",
+    "fix_details": [
+      "Reduce current.",
+      "Increase welding speed and keep it steady.",
+      "Reduce amount of fill material."
+    ],
+    "source_page": 40,
+    "page_image_ref": "knowledge/pages/owner_manual/p040.png"
+  },
+  {
+    "id": "strike_test_good_weld",
+    "process_family": "wire",
+    "category": "bend",
+    "view": "strike_test",
+    "label": "Strike Test — Good Weld (bends, not brittle)",
+    "visual_signature": "Strike test illustration: one scrap clamped in a vise, the other scrap struck by a dead-blow hammer. The good-weld result shows the struck piece deformed/bent away from the clamp but the weld itself is still intact — the joint has flexed rather than fractured.",
+    "fix_summary": "Good ductile weld — no action required.",
+    "fix_details": [
+      "A good weld deforms but does not break under hammer impact.",
+      "Indicates proper fusion and penetration."
+    ],
+    "source_page": 34,
+    "page_image_ref": "knowledge/pages/owner_manual/p034.png"
+  },
+  {
+    "id": "strike_test_poor_weld",
+    "process_family": "wire",
+    "category": "bend",
+    "view": "strike_test",
+    "label": "Strike Test — Poor Weld (snaps or cracks)",
+    "visual_signature": "Strike test illustration: one scrap clamped in a vise, the other scrap struck by a dead-blow hammer. The poor-weld result shows the struck piece cleanly broken off at the weld line — the joint has fractured brittly with a clean separation.",
+    "fix_summary": "Brittle weld — review heat, cleanliness, and technique, then re-weld.",
+    "fix_details": [
+      "A poor weld is brittle and snaps at the weld under hammer impact.",
+      "Re-examine penetration, fusion, and cleanliness.",
+      "Increase heat input and/or clean workpiece before retrying."
+    ],
+    "source_page": 34,
+    "page_image_ref": "knowledge/pages/owner_manual/p034.png"
+  }
+]

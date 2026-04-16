@@ -1,0 +1,110 @@
+[
+  {
+    "id": "wire_feed_speed",
+    "label": "Wire Feed (Speed)",
+    "description": "Wire Feed (Speed)",
+    "icon_hint": "custom"
+  },
+  {
+    "id": "workpiece_ground_cable",
+    "label": "Workpiece Ground Cable",
+    "description": "Workpiece Ground Cable",
+    "icon_hint": "custom"
+  },
+  {
+    "id": "torch_cable",
+    "label": "Torch Cable",
+    "description": "Torch Cable",
+    "icon_hint": "custom"
+  },
+  {
+    "id": "overheat_shutdown_indicator",
+    "label": "Overheat Shutdown Indicator",
+    "description": "Overheat Shutdown Indicator",
+    "icon_hint": "thermometer"
+  },
+  {
+    "id": "cooling_fan",
+    "label": "Cooling Fan",
+    "description": "Cooling Fan",
+    "icon_hint": "fan"
+  },
+  {
+    "id": "housing_ground_point",
+    "label": "Housing Ground Point",
+    "description": "Housing Ground Point",
+    "icon_hint": "custom"
+  },
+  {
+    "id": "vac",
+    "label": "VAC",
+    "description": "Volts Alternating Current",
+    "icon_hint": "zap"
+  },
+  {
+    "id": "a",
+    "label": "A",
+    "description": "Amperes",
+    "icon_hint": "custom"
+  },
+  {
+    "id": "ocv",
+    "label": "OCV",
+    "description": "Open Circuit Voltage",
+    "icon_hint": "custom"
+  },
+  {
+    "id": "kva",
+    "label": "KVA",
+    "description": "Kilovolt Amperes (Volts / 1000 * Amperes)",
+    "icon_hint": "custom"
+  },
+  {
+    "id": "ipm",
+    "label": "IPM",
+    "description": "Inches Per Minute",
+    "icon_hint": "custom"
+  },
+  {
+    "id": "awg",
+    "label": "AWG",
+    "description": "American Wire Gauge",
+    "icon_hint": "custom"
+  },
+  {
+    "id": "electric_shock_hazard",
+    "label": "Electric Shock Hazard",
+    "description": "Electric Shock Hazard. Do not touch energized parts.",
+    "icon_hint": "zap"
+  },
+  {
+    "id": "inhalation_hazard",
+    "label": "Inhalation Hazard",
+    "description": "Inhalation Hazard. Keep head out of fumes and use proper ventilation.",
+    "icon_hint": "wind"
+  },
+  {
+    "id": "read_manual",
+    "label": "Read manual before setup and/or use",
+    "description": "Read manual before setup and/or use.",
+    "icon_hint": "book-open"
+  },
+  {
+    "id": "fire_hazard",
+    "label": "Fire Hazard",
+    "description": "Fire Hazard. Keep flammable materials away during welding. Spatter can cause accidental fires.",
+    "icon_hint": "flame"
+  },
+  {
+    "id": "arc_ray_hazard",
+    "label": "Arc Ray Hazard",
+    "description": "Arc Ray Hazard. Wear welding helmet with properly rated filter lens.",
+    "icon_hint": "triangle-alert"
+  },
+  {
+    "id": "pacemaker_hazard",
+    "label": "Pacemaker Hazard",
+    "description": "Pacemaker Hazard. Welding processes may interfere with pacemakers. Consult doctor before use.",
+    "icon_hint": "heart-off"
+  }
+]

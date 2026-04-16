@@ -1,0 +1,150 @@
+{
+  "decision_questions": [
+    {
+      "step": 1,
+      "question": "What is your skill level?",
+      "affects": "skill_level_best_fit"
+    },
+    {
+      "step": 2,
+      "question": "Will you need shielding gas?",
+      "affects": "shielding_gas_required"
+    },
+    {
+      "step": 3,
+      "question": "What type of material will you be welding?",
+      "affects": "materials"
+    },
+    {
+      "step": 4,
+      "question": "What is your material thickness?",
+      "affects": "thickness_range"
+    },
+    {
+      "step": 5,
+      "question": "Typical applications",
+      "affects": "typical_applications"
+    },
+    {
+      "step": 6,
+      "question": "How clean do you need your weld?",
+      "affects": "cleanliness"
+    }
+  ],
+  "process_columns": [
+    {
+      "process": "flux_cored",
+      "shielding_gas_required": false,
+      "materials": [
+        "Steel",
+        "Stainless Steel"
+      ],
+      "thickness_range": "18 Gauge to 5/16\"",
+      "typical_applications": [
+        "Galvanized steel",
+        "General fabrication",
+        "Pipe and tubing",
+        "Maintenance & repair"
+      ],
+      "cleanliness": "more spatter",
+      "advantages": [
+        "Ideal for outdoor or windy conditions",
+        "Forgiving on rusty or dirty steels",
+        "Good out of position welding capabilities",
+        "High deposition rates achievable"
+      ],
+      "skill_level_best_fit": [
+        "low",
+        "moderate",
+        "high"
+      ]
+    },
+    {
+      "process": "mig",
+      "shielding_gas_required": true,
+      "materials": [
+        "Steel",
+        "Stainless Steel",
+        "Aluminum (spool gun required)"
+      ],
+      "thickness_range": "22 Gauge to 3/8\"",
+      "typical_applications": [
+        "Sheet metal",
+        "Automotive body",
+        "Tubing",
+        "Structural steel"
+      ],
+      "cleanliness": "clean / minimal spatter",
+      "advantages": [
+        "Fast production (high welding speeds)",
+        "Easiest to learn",
+        "Clean welds with no slag",
+        "Better control on thin materials"
+      ],
+      "skill_level_best_fit": [
+        "low",
+        "moderate",
+        "high"
+      ]
+    },
+    {
+      "process": "stick",
+      "shielding_gas_required": false,
+      "materials": [
+        "Steel",
+        "Stainless Steel",
+        "Castings"
+      ],
+      "thickness_range": "10 Gauge to 1/2\"",
+      "typical_applications": [
+        "Pipe and tubing",
+        "Structural steel",
+        "Pressure vessels",
+        "Maintenance & repair"
+      ],
+      "cleanliness": "more spatter",
+      "advantages": [
+        "Ideal for outdoor or windy conditions",
+        "Forgiving on rusty or dirty steels",
+        "Deep penetration",
+        "Good choice for thicker materials"
+      ],
+      "skill_level_best_fit": [
+        "low",
+        "moderate",
+        "high"
+      ]
+    },
+    {
+      "process": "tig",
+      "shielding_gas_required": true,
+      "materials": [
+        "Steel, Stainless Steel, Chrome Moly (DC TIG required)",
+        "Aluminum, Magnesium Alloys (AC TIG required)"
+      ],
+      "thickness_range": "24 Gauge to 3/16\"",
+      "typical_applications": [
+        "Stainless steel exhausts",
+        "Bicycle frames",
+        "Thin wall pipe & tubing",
+        "Metal art"
+      ],
+      "cleanliness": "extremely clean",
+      "advantages": [
+        "Highest quality welds",
+        "Extremely aesthetic weld appearance",
+        "Can be used on a variety of materials",
+        "Precise control"
+      ],
+      "skill_level_best_fit": [
+        "high"
+      ]
+    }
+  ],
+  "duty_cycle_example": {
+    "amps": 165,
+    "duty_cycle_percent": 30,
+    "minutes_welding": 3,
+    "minutes_resting": 7
+  }
+}

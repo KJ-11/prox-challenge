@@ -1,0 +1,147 @@
+[
+  {
+    "process": "mig",
+    "power_input": [
+      {
+        "voltage": "120V",
+        "hz": 60
+      },
+      {
+        "voltage": "240V",
+        "hz": 60
+      }
+    ],
+    "current_input_at_output": [
+      {
+        "voltage": "120V",
+        "input_amps": 20.8,
+        "output_amps": 100
+      },
+      {
+        "voltage": "240V",
+        "input_amps": 25.5,
+        "output_amps": 200
+      }
+    ],
+    "welding_current_range": [
+      {
+        "voltage": "120V",
+        "min_amps": 30,
+        "max_amps": 140
+      },
+      {
+        "voltage": "240V",
+        "min_amps": 30,
+        "max_amps": 220
+      }
+    ],
+    "max_ocv_vdc": 86,
+    "weldable_materials": [
+      "Mild Steel",
+      "Stainless Steel",
+      "Aluminum (with optional Spool Gun)"
+    ],
+    "welding_wire_capacity": {
+      "solid_core_inches": [
+        "0.025\"",
+        "0.030\"",
+        "0.035\""
+      ],
+      "flux_cored_inches": [
+        "0.030\"",
+        "0.035\"",
+        "0.045\""
+      ]
+    },
+    "wire_speed_ipm": {
+      "min": 50,
+      "max": 500
+    },
+    "wire_spool_capacity_lb": 12
+  },
+  {
+    "process": "tig",
+    "power_input": [
+      {
+        "voltage": "120V",
+        "hz": 60
+      },
+      {
+        "voltage": "240V",
+        "hz": 60
+      }
+    ],
+    "current_input_at_output": [
+      {
+        "voltage": "120V",
+        "input_amps": 20.6,
+        "output_amps": 125
+      },
+      {
+        "voltage": "240V",
+        "input_amps": 15.6,
+        "output_amps": 175
+      }
+    ],
+    "welding_current_range": [
+      {
+        "voltage": "120V",
+        "min_amps": 10,
+        "max_amps": 125
+      },
+      {
+        "voltage": "240V",
+        "min_amps": 10,
+        "max_amps": 175
+      }
+    ],
+    "max_ocv_vdc": 86,
+    "weldable_materials": [
+      "Mild Steel",
+      "Stainless Steel",
+      "Chrome Moly"
+    ]
+  },
+  {
+    "process": "stick",
+    "power_input": [
+      {
+        "voltage": "120V",
+        "hz": 60
+      },
+      {
+        "voltage": "240V",
+        "hz": 60
+      }
+    ],
+    "current_input_at_output": [
+      {
+        "voltage": "120V",
+        "input_amps": 19.5,
+        "output_amps": 80
+      },
+      {
+        "voltage": "240V",
+        "input_amps": 23.7,
+        "output_amps": 175
+      }
+    ],
+    "welding_current_range": [
+      {
+        "voltage": "120V",
+        "min_amps": 10,
+        "max_amps": 80
+      },
+      {
+        "voltage": "240V",
+        "min_amps": 10,
+        "max_amps": 175
+      }
+    ],
+    "max_ocv_vdc": 86,
+    "weldable_materials": [
+      "Mild Steel",
+      "Stainless Steel"
+    ]
+  }
+]

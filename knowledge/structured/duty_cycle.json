@@ -1,0 +1,116 @@
+[
+  {
+    "process": "mig",
+    "voltage": "120V",
+    "current_range_amps": {
+      "min": 30,
+      "max": 140
+    },
+    "rated_duty_cycle": {
+      "percent": 40,
+      "at_amperage": 100,
+      "minutes_welding_per_10": 4,
+      "minutes_resting_per_10": 6
+    },
+    "continuous_amperage": 75,
+    "current_input_at_output": {
+      "amps": 20.8,
+      "at_output_amps": 100
+    }
+  },
+  {
+    "process": "mig",
+    "voltage": "240V",
+    "current_range_amps": {
+      "min": 30,
+      "max": 220
+    },
+    "rated_duty_cycle": {
+      "percent": 25,
+      "at_amperage": 200,
+      "minutes_welding_per_10": 2.5,
+      "minutes_resting_per_10": 7.5
+    },
+    "continuous_amperage": 115,
+    "current_input_at_output": {
+      "amps": 25.5,
+      "at_output_amps": 200
+    }
+  },
+  {
+    "process": "tig",
+    "voltage": "120V",
+    "current_range_amps": {
+      "min": 10,
+      "max": 125
+    },
+    "rated_duty_cycle": {
+      "percent": 40,
+      "at_amperage": 125,
+      "minutes_welding_per_10": 4,
+      "minutes_resting_per_10": 6
+    },
+    "continuous_amperage": 90,
+    "current_input_at_output": {
+      "amps": 20.6,
+      "at_output_amps": 125
+    }
+  },
+  {
+    "process": "tig",
+    "voltage": "240V",
+    "current_range_amps": {
+      "min": 10,
+      "max": 175
+    },
+    "rated_duty_cycle": {
+      "percent": 30,
+      "at_amperage": 175,
+      "minutes_welding_per_10": 3,
+      "minutes_resting_per_10": 7
+    },
+    "continuous_amperage": 105,
+    "current_input_at_output": {
+      "amps": 15.6,
+      "at_output_amps": 175
+    }
+  },
+  {
+    "process": "stick",
+    "voltage": "120V",
+    "current_range_amps": {
+      "min": 10,
+      "max": 80
+    },
+    "rated_duty_cycle": {
+      "percent": 40,
+      "at_amperage": 80,
+      "minutes_welding_per_10": 4,
+      "minutes_resting_per_10": 6
+    },
+    "continuous_amperage": 60,
+    "current_input_at_output": {
+      "amps": 19.5,
+      "at_output_amps": 80
+    }
+  },
+  {
+    "process": "stick",
+    "voltage": "240V",
+    "current_range_amps": {
+      "min": 10,
+      "max": 175
+    },
+    "rated_duty_cycle": {
+      "percent": 25,
+      "at_amperage": 175,
+      "minutes_welding_per_10": 2.5,
+      "minutes_resting_per_10": 7.5
+    },
+    "continuous_amperage": 100,
+    "current_input_at_output": {
+      "amps": 23.7,
+      "at_output_amps": 175
+    }
+  }
+]
