@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { FileText, ImageIcon, Table as TableIcon } from "lucide-react";
+import { FileText, ImageIcon, Sparkles, Table as TableIcon } from "lucide-react";
 import type {
   AssistantMessage,
   ChatMessage,
@@ -27,8 +27,12 @@ export function SourcesSidebar({
   }
 
   const { pages, figures, tables } = enrichSources(focused.sources);
+  const artifactPages = focused.sources.artifactPages;
   const empty =
-    pages.length === 0 && figures.length === 0 && tables.length === 0;
+    pages.length === 0 &&
+    figures.length === 0 &&
+    tables.length === 0 &&
+    artifactPages.length === 0;
 
   return (
     <div className="space-y-5 text-xs">
@@ -38,10 +42,36 @@ export function SourcesSidebar({
         </h2>
         {empty && (
           <p className="text-[color:var(--color-muted)]">
-            Agent answered from the cached catalog — no explicit lookups.
+            Answer drawn from the cached catalog; no tools or artifacts were
+            used.
           </p>
         )}
       </header>
+
+      {artifactPages.length > 0 && (
+        <Section
+          icon={<Sparkles className="h-3.5 w-3.5" />}
+          label="Rendered artifacts"
+        >
+          <ul className="space-y-1.5">
+            {artifactPages.map((a, i) => (
+              <li
+                key={i}
+                className="rounded-md border border-[color:var(--color-border)] bg-[color:var(--color-surface)] p-2"
+              >
+                <div className="font-semibold text-[color:var(--color-foreground)]">
+                  {a.label}
+                </div>
+                <div className="font-mono text-[10px] text-[color:var(--color-muted)]">
+                  {a.pages.length > 0
+                    ? `grounded in pp. ${a.pages.join(", ")}`
+                    : "rendered from cached catalog"}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </Section>
+      )}
 
       {pages.length > 0 && <Section icon={<FileText className="h-3.5 w-3.5" />} label="Pages cited">
         <ul className="space-y-2">

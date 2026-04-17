@@ -69,6 +69,7 @@ export interface CollectedSources {
   chunks: string[];
   figures: string[];
   tables: Array<{ name: string; filters?: Record<string, unknown> }>;
+  artifactPages: Array<{ label: string; pages: number[] }>;
 }
 
 export interface UsageTotals {
@@ -97,7 +98,7 @@ export type { ServerEvent };
 /* ---------- helpers ---------- */
 
 export function emptySources(): CollectedSources {
-  return { chunks: [], figures: [], tables: [] };
+  return { chunks: [], figures: [], tables: [], artifactPages: [] };
 }
 
 export function emptyUsage(): UsageTotals {

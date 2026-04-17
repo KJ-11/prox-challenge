@@ -3,6 +3,8 @@
 import { useCallback, useRef, useState } from "react";
 import type { ServerEvent } from "@/lib/agent/events";
 import { readSseEvents } from "./sse";
+import { sourcesForArtifact } from "@/lib/artifacts/source-pages";
+import { artifactLabel } from "@/lib/artifacts/registry";
 import {
   emptySources,
   emptyUsage,
@@ -337,13 +339,28 @@ function reduceAssistant(
         })),
         event.id,
       );
-    case "artifact":
-      return pushBlock(m, {
+    case "artifact": {
+      const withBlock = pushBlock(m, {
         type: "artifact",
         artifact_id: event.artifact_id,
         artifact_type: event.artifact_type,
         params: event.params,
       });
+      const derived = sourcesForArtifact(event.artifact_type, event.params);
+      if (derived.length === 0) return withBlock;
+      const label = artifactLabel(event.artifact_type);
+      const artifactPages = [
+        ...withBlock.sources.artifactPages,
+        ...derived.map((d) => ({
+          label: `${label} · ${d.name}`,
+          pages: d.pages,
+        })),
+      ];
+      return {
+        ...withBlock,
+        sources: { ...withBlock.sources, artifactPages },
+      };
+    }
     case "clarification":
       return pushBlock(m, {
         type: "clarification",
