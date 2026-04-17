@@ -192,13 +192,13 @@ Build in priority order. Each must reach demo quality before moving on.
 
 ---
 
-## Phase 10 — Video + README
+## Phase 10 — README
 
-- [ ] Video script (the outline in our strategy)
-- [ ] Record with ScreenStudio or Loom
-- [ ] Upload YouTube unlisted
+(Video cut from scope — deferred to TODO.md. Evaluators read the README and
+run the hosted demo.)
+
 - [ ] README rewrite:
-  - TL;DR with hosted link + video link
+  - TL;DR with hosted link
   - Run-in-2-minutes
   - Screenshots of signature artifacts (4-5)
   - Design decisions (condensed)
@@ -214,18 +214,9 @@ Build in priority order. Each must reach demo quality before moving on.
 
 ---
 
-## Phase 11 — Voice (stretch, conditional)
+## Phase 11 — Voice (CUT)
 
-Only if Phases 0-10 are 100% polished and we have runway.
-
-- [ ] Mic button activated (Web Speech API)
-- [ ] STT → input box → auto-submit on silence
-- [ ] TTS toggle for agent responses via SpeechSynthesis
-- [ ] Mute control in header
-- [ ] Test on Chrome desktop + Safari iOS
-- [ ] Document in README; demo in video
-
-**Cut rule:** if we're not confident in core submission ~2 days before deadline, voice doesn't ship.
+Deferred to TODO.md. Not in this submission.
 
 ---
 
@@ -234,7 +225,6 @@ Only if Phases 0-10 are 100% polished and we have runway.
 - [ ] Final eval pass clean
 - [ ] `TODO.md` honest and up to date
 - [ ] Hosted deploy working
-- [ ] Video link live
 - [ ] README polished
 - [ ] Fork pushed to GitHub
 - [ ] Submit fork URL to useprox.com/join/challenge

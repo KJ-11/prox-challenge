@@ -45,3 +45,6 @@ next-env.d.ts
 
 # playwright-mcp temp traces
 /.playwright-mcp/
+
+# user's local competitor comparison work (not part of submission)
+/competitor-tests/

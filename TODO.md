@@ -12,17 +12,22 @@ Current fallback when no template fits: the agent inlines 1-2 manual figures + w
 
 Revisit if: we have time and the 8 templates leave visible gaps during eval.
 
-### Voice — upgrade path beyond Web Speech API
+### Voice — CUT from the submission
 
-MVP voice (if built in Phase 11) uses the browser-native Web Speech API. It has no API-key cost but sounds robotic and inconsistent across browsers.
+Originally Phase 11. Deferred entirely. Voice would have mirrored the
+job description's "expressive voice AI" pillar but adds meaningful risk
+during evaluation week. Not in this submission.
 
-Real ambition (from the job description): "expressive voice AI that can pass the Turing test." The path there:
-
-- **Mode A+**: premium TTS via ElevenLabs or OpenAI TTS (opt-in second API key for hosted demo)
+Path forward when we return to it:
+- **Mode A**: browser-native Web Speech API (no extra API key, robotic quality)
+- **Mode A+**: premium TTS via ElevenLabs or OpenAI TTS
 - **Mode B**: realtime continuous voice via OpenAI Realtime API — feels like a phone call in-browser
 - **Mode C**: phone-based via Twilio SIP with a real phone number
 
-All require additional infrastructure and at least one additional API key.
+### Video walkthrough — CUT from the submission
+
+Originally part of Phase 10. Deferred. The README + hosted demo cover the
+evaluation surface; a separate walkthrough video is polish for a later pass.
 
 ### Shareable conversation URLs
 
