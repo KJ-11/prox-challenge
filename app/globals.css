@@ -3,11 +3,33 @@
 :root {
   --background: #ffffff;
   --foreground: #111111;
+  --surface: #ffffff;
+  --surface-muted: #fafafa;
+  --border: #e5e5e5;
+  --border-strong: #d4d4d4;
+  --muted: #737373;
+  --brand: #e94b22;
+  --brand-soft: #fff0e9;
+  --brand-strong: #c33a16;
+  --positive: #dc2626;
+  --negative: #262626;
+  --highlight: #fef3c7;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-muted: var(--muted);
+  --color-brand: var(--brand);
+  --color-brand-soft: var(--brand-soft);
+  --color-brand-strong: var(--brand-strong);
+  --color-positive: var(--positive);
+  --color-negative: var(--negative);
+  --color-highlight: var(--highlight);
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
 }
@@ -16,6 +38,17 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --surface: #111111;
+    --surface-muted: #1a1a1a;
+    --border: #262626;
+    --border-strong: #404040;
+    --muted: #a3a3a3;
+    --brand: #f97316;
+    --brand-soft: #2a1509;
+    --brand-strong: #fb923c;
+    --positive: #ef4444;
+    --negative: #e5e5e5;
+    --highlight: #3f2f08;
   }
 }
 

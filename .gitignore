@@ -42,3 +42,6 @@ next-env.d.ts
 
 # extraction cache (resumable intermediates — not committed)
 /knowledge/.cache/
+
+# playwright-mcp temp traces
+/.playwright-mcp/
