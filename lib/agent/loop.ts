@@ -81,7 +81,14 @@ function mapStreamEvent(
       break;
     }
     case "content_block_stop": {
-      state.activeTool = null;
+      if (state.activeTool) {
+        out.push({
+          type: "tool_call_result",
+          id: state.activeTool.id,
+          ok: true,
+        });
+        state.activeTool = null;
+      }
       break;
     }
     case "message_delta": {
