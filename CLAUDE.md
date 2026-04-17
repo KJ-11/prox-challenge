@@ -127,7 +127,6 @@ npm run eval             # run agent against evals/questions.yaml, write evals/r
 
 ## Pointers
 
-- **Build plan + current phase**: `PLAN.md`
 - **Deferred / cut work**: `TODO.md`
 - **Original challenge**: `README.md` (will be rewritten before submission)
 - **Source PDFs**: `files/`

@@ -4,6 +4,8 @@ A multimodal technical expert for Harbor Freight's **Vulcan OmniPro 220** multip
 
 > 🔗 **Live demo:** https://prox-challenge-delta.vercel.app — ask anything about the welder, or click a suggested question. No account, no login.
 
+> ⏱️ Built in a **4-hour timeboxed sprint** against the [Prox founding engineer challenge](./README-challenge-original.md).
+
 <p align="center">
   <img src="docs/screenshots/polarity-compare.png" alt="Polarity compare artifact — MIG vs Flux-cored side by side" width="900" />
   <br/>
@@ -47,7 +49,7 @@ Five signature flows:
 | "Getting porosity in my flux-cored welds — help" | A collapsible decision tree filtered to flux-cored-specific causes (polarity, CTWD, contamination) with linked figures |
 | Upload a weld photo + "diagnose this" | Side-by-side comparison of your photo vs. the manual's closest labeled reference, with the fix checklist below |
 
-Plus three more templates (component highlight, procedural walkthrough, interactive selection chart) for ~8 total.
+Plus three more templates (component highlight, procedural walkthrough, interactive selection chart) for eight total.
 
 ---
 
@@ -57,7 +59,7 @@ A few non-obvious choices worth flagging:
 
 **Visual-first, not prose-first.** The system prompt's single load-bearing rule: if an answer involves a diagram, matrix, or procedure, the agent calls `render_artifact` — prose describing a diagram is explicitly a failure mode. This is enforced with a few-shot "wrong vs right" example in the system prompt.
 
-**Claude-as-retriever, not embeddings.** The full knowledge catalog (~130 items: chunk breadcrumbs, figure captions, structured-table schemas, all 35 weld diagnosis entries) lives in the cached system prompt. The agent picks IDs directly via `load_chunks` / `load_figures` / `lookup_structured`. No vector DB. For this corpus size, Claude's reasoning beats cosine similarity and keeps the whole pipeline to one API key. Cached tokens (~32k) are read at ~90% hit rate after the first turn in a session.
+**Claude-as-retriever, not embeddings.** The full knowledge catalog (about 130 items: chunk breadcrumbs, figure captions, structured-table schemas, all 35 weld diagnosis entries) lives in the cached system prompt. The agent picks IDs directly via `load_chunks` / `load_figures` / `lookup_structured`. No vector DB. For this corpus size, Claude's reasoning beats cosine similarity and keeps the whole pipeline to one API key. The cached block is roughly 32k tokens, read back at about 90% hit rate after the first turn in a session.
 
 **Pre-built artifact templates, not generative.** Eight React components with typed params, not on-the-fly HTML generation. Reliable to render, themable for dark mode, fast. The generative fallback is tracked in `TODO.md` if we return to it.
 
@@ -67,7 +69,7 @@ A few non-obvious choices worth flagging:
 
 **Single API key, single model, single config file.** Everything configurable lives in `.env.example`. Model pinned to `claude-opus-4-7` — never a moving alias.
 
-More background on the design process in `lib/` and `PLAN.md`.
+More background on the design process is in `lib/` and the deferred-work ledger in [`TODO.md`](./TODO.md).
 
 ---
 
@@ -167,10 +169,10 @@ No dedicated "search" tool and no dedicated weld-photo tool. The agent picks IDs
 ### System prompt
 
 Two blocks:
-1. **Framing** (~1.5k tokens, uncached) — role, rendering principle, decision checklist, clarification policy, citation rule, safety rule, tone, weld-photo guidance, few-shot examples.
-2. **Catalog** (~5-6k tokens, `cache_control: ephemeral`) — every chunk ID, figure ID, structured-table description + filter keys, weld diagnosis entry. Enforces "never invent IDs."
+1. **Framing** (roughly 1.5k tokens, uncached) — role, rendering principle, decision checklist, clarification policy, citation rule, safety rule, tone, weld-photo guidance, few-shot examples.
+2. **Catalog** (roughly 5-6k tokens, `cache_control: ephemeral`) — every chunk ID, figure ID, structured-table description + filter keys, weld diagnosis entry. Enforces "never invent IDs."
 
-Cache hit rate on the second turn within a session: ~90%+ (verified in evals).
+Cache hit rate on the second turn within a session: 90%+ (verified in evals).
 
 ---
 
