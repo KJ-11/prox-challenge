@@ -14,6 +14,26 @@ import {
   WeldComparison,
   WeldComparisonParamsSchema,
 } from "./WeldComparison";
+import {
+  SettingsConfigurator,
+  SettingsConfiguratorParamsSchema,
+} from "./SettingsConfigurator";
+import {
+  TroubleshootingTree,
+  TroubleshootingTreeParamsSchema,
+} from "./TroubleshootingTree";
+import {
+  ProceduralWalkthrough,
+  ProceduralWalkthroughParamsSchema,
+} from "./ProceduralWalkthrough";
+import {
+  ComponentHighlight,
+  ComponentHighlightParamsSchema,
+} from "./ComponentHighlight";
+import {
+  SelectionChartInteractive,
+  SelectionChartInteractiveParamsSchema,
+} from "./SelectionChartInteractive";
 
 interface Entry {
   component: (params: unknown) => React.JSX.Element;
@@ -47,14 +67,51 @@ const REGISTRY: Record<string, Entry> = {
     schema: WeldComparisonParamsSchema,
     label: "Weld photo comparison",
   },
-};
-
-const PLANNED_LABELS: Record<string, string> = {
-  settings_configurator: "Settings configurator",
-  troubleshooting_tree: "Troubleshooting tree",
-  component_highlight: "Component highlight",
-  selection_chart_interactive: "Interactive selection chart",
-  procedural_walkthrough: "Procedural walkthrough",
+  settings_configurator: {
+    component: (p) => (
+      <SettingsConfigurator
+        {...(p as z.infer<typeof SettingsConfiguratorParamsSchema>)}
+      />
+    ),
+    schema: SettingsConfiguratorParamsSchema,
+    label: "Settings configurator",
+  },
+  troubleshooting_tree: {
+    component: (p) => (
+      <TroubleshootingTree
+        {...(p as z.infer<typeof TroubleshootingTreeParamsSchema>)}
+      />
+    ),
+    schema: TroubleshootingTreeParamsSchema,
+    label: "Troubleshooting tree",
+  },
+  procedural_walkthrough: {
+    component: (p) => (
+      <ProceduralWalkthrough
+        {...(p as z.infer<typeof ProceduralWalkthroughParamsSchema>)}
+      />
+    ),
+    schema: ProceduralWalkthroughParamsSchema,
+    label: "Procedural walkthrough",
+  },
+  component_highlight: {
+    component: (p) => (
+      <ComponentHighlight
+        {...(p as z.infer<typeof ComponentHighlightParamsSchema>)}
+      />
+    ),
+    schema: ComponentHighlightParamsSchema,
+    label: "Component highlight",
+  },
+  selection_chart_interactive: {
+    component: (p) => (
+      <SelectionChartInteractive
+        {...(p as z.infer<typeof SelectionChartInteractiveParamsSchema>)}
+      />
+    ),
+    schema: SelectionChartInteractiveParamsSchema,
+    label: "Interactive selection chart",
+  },
 };
 
 export function renderArtifact(
@@ -63,13 +120,7 @@ export function renderArtifact(
 ): ReactNode {
   const entry = REGISTRY[artifactType];
   if (!entry) {
-    return (
-      <ComingSoon
-        artifactType={artifactType}
-        params={params}
-        label={PLANNED_LABELS[artifactType]}
-      />
-    );
+    return <Unknown artifactType={artifactType} params={params} />;
   }
   const parsed = entry.schema.safeParse(params);
   if (!parsed.success) {
@@ -85,35 +136,28 @@ export function renderArtifact(
 }
 
 export function artifactLabel(artifactType: string): string {
-  return (
-    REGISTRY[artifactType]?.label ??
-    PLANNED_LABELS[artifactType] ??
-    artifactType
-  );
+  return REGISTRY[artifactType]?.label ?? artifactType;
 }
 
-function ComingSoon({
+function Unknown({
   artifactType,
   params,
-  label,
 }: {
   artifactType: string;
   params: unknown;
-  label?: string;
 }): React.JSX.Element {
   return (
     <div className="rounded-lg border border-dashed border-[color:var(--color-border-strong)] bg-[color:var(--color-surface-muted)] p-4 text-xs text-[color:var(--color-muted)]">
       <div className="mb-1 flex items-center gap-2">
-        <span className="rounded-sm bg-[color:var(--color-brand-soft)] px-1.5 py-0.5 font-mono text-[10px] uppercase text-[color:var(--color-brand-strong)]">
-          coming soon
+        <span className="rounded-sm bg-[color:var(--color-surface)] px-1.5 py-0.5 font-mono text-[10px] uppercase text-[color:var(--color-muted)]">
+          unknown type
         </span>
         <span className="font-semibold text-[color:var(--color-foreground)]">
-          {label ?? artifactType}
+          {artifactType}
         </span>
       </div>
       <p>
-        The agent requested this artifact template, which isn't built yet. The
-        params it emitted are preserved below for reference.
+        The agent emitted an artifact type that isn't in the registry.
       </p>
       <pre className="mt-2 overflow-auto rounded bg-[color:var(--color-surface)] p-2 font-mono text-[10px] text-[color:var(--color-foreground)]/80">
         {JSON.stringify(params, null, 2)}

@@ -3,6 +3,7 @@ import polarityRaw from "@/knowledge/structured/polarity.json";
 import specsRaw from "@/knowledge/structured/specs.json";
 import selectionChartRaw from "@/knowledge/structured/selection_chart.json";
 import weldDiagnosisRaw from "@/knowledge/structured/weld_diagnosis.json";
+import troubleshootingRaw from "@/knowledge/structured/troubleshooting.json";
 import corpusRaw from "@/knowledge/corpus.json";
 import figureCatalogRaw from "@/knowledge/figures/catalog.json";
 import {
@@ -11,6 +12,7 @@ import {
   SpecsSchema,
   SelectionChartSchema,
   WeldDiagnosisSchema,
+  TroubleshootingSchema,
   CorpusSchema,
   FigureCatalogSchema,
 } from "@/lib/knowledge/schemas";
@@ -24,6 +26,8 @@ export const polarityData = PolaritySchema.parse(polarityRaw);
 export const specsData = SpecsSchema.parse(specsRaw);
 export const selectionChartData = SelectionChartSchema.parse(selectionChartRaw);
 export const weldDiagnosisData = WeldDiagnosisSchema.parse(weldDiagnosisRaw);
+export const troubleshootingData =
+  TroubleshootingSchema.parse(troubleshootingRaw);
 export const corpusData = CorpusSchema.parse(corpusRaw);
 export const figureCatalogData = FigureCatalogSchema.parse(figureCatalogRaw);
 
