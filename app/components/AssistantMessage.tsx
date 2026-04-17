@@ -25,6 +25,7 @@ export interface AssistantMessageProps {
   focused?: boolean;
   onRegenerate?: () => void;
   canRegenerate?: boolean;
+  latestUserImageUrl?: string;
 }
 
 export function AssistantMessage({
@@ -35,6 +36,7 @@ export function AssistantMessage({
   focused,
   onRegenerate,
   canRegenerate,
+  latestUserImageUrl,
 }: AssistantMessageProps): React.JSX.Element {
   const { mainBlocks, activeToolCall } = partitionBlocks(message);
   const doneOrErrored =
@@ -65,6 +67,7 @@ export function AssistantMessage({
             blockIndex={i}
             onClarificationSelect={onClarificationSelect}
             reasoningOn={reasoningOn}
+            latestUserImageUrl={latestUserImageUrl}
           />
         ))}
       </div>
@@ -188,11 +191,13 @@ function BlockRenderer({
   blockIndex,
   onClarificationSelect,
   reasoningOn,
+  latestUserImageUrl,
 }: {
   block: AssistantBlock;
   blockIndex: number;
   onClarificationSelect?: (blockIndex: number, value: string) => void;
   reasoningOn: boolean;
+  latestUserImageUrl?: string;
 }): React.JSX.Element | null {
   switch (block.type) {
     case "text":
@@ -202,6 +207,7 @@ function BlockRenderer({
         <ArtifactRender
           artifactType={block.artifact_type}
           params={block.params}
+          userImageUrl={latestUserImageUrl}
         />
       );
     case "clarification":

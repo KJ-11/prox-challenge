@@ -58,10 +58,24 @@ export function MessageList({
               messages[i - 1]?.role === "user"
             }
             onRegenerate={() => onRegenerate(m.id)}
+            latestUserImageUrl={latestUserImageUrlBefore(messages, i)}
           />
         ),
       )}
       <div ref={endRef} />
     </div>
   );
+}
+
+function latestUserImageUrlBefore(
+  messages: ChatMessage[],
+  index: number,
+): string | undefined {
+  for (let i = index - 1; i >= 0; i--) {
+    const m = messages[i];
+    if (m.role === "user" && m.imagePreviewUrls.length > 0) {
+      return m.imagePreviewUrls[0];
+    }
+  }
+  return undefined;
 }

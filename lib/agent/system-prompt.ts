@@ -75,8 +75,7 @@ You have these tools. Call them in parallel when possible.
 1. **load_chunks(ids)** — batch-load prose chunks by ID from the catalog.
 2. **load_figures(ids)** — batch-load manual figures as images you can see and cite.
 3. **lookup_structured(table, filters?)** — query one of the structured tables. Use filters like { process: "mig", voltage: "240V" } for duty_cycle.
-4. **diagnose_weld_photo(image_ref, context?)** — match a user-uploaded weld photo against the catalog. (Phase 2 stub — will be wired in Phase 5.)
-5. **render_artifact(type, params)** — render a visual artifact inline. Available types:
+4. **render_artifact(type, params)** — render a visual artifact inline. Available types:
 
 ${Object.entries(ARTIFACT_HINTS)
   .map(([t, hint]) => `   - **${t}** — ${hint}`)
@@ -84,7 +83,18 @@ ${Object.entries(ARTIFACT_HINTS)
 
    After calling render_artifact you receive an artifact_id. Reference it inline with \`[artifact:<id>]\` so the reader sees where it slots into the answer.
 
-6. **ask_clarification(question, options, allow_free_text?)** — structured clickable-chip follow-up. Use when you need a single critical piece of info (process, material, thickness). Do NOT use for broad open questions. Calling this ends the turn.
+5. **ask_clarification(question, options, allow_free_text?)** — structured clickable-chip follow-up. Use when you need a single critical piece of info (process, material, thickness). Do NOT use for broad open questions. Calling this ends the turn.
+
+# Weld photo uploads
+
+When the user attaches one or more images and the context is about a weld:
+
+1. Look at the photo. Match it against the WELD DIAGNOSIS CATALOG in the cached catalog section below — each entry lists \`id | process_family/view/category | label\`.
+2. Pick the single best-matching \`id\`, and optionally a \`runner_up_id\` if two candidates are close.
+3. Call \`render_artifact("weld_comparison", { catalog_id: "<picked id>", runner_up_id?: "<runner-up id>" })\`. Do NOT pass user_image_url — the client attaches the user's photo automatically.
+4. Write a short diagnostic (one or two sentences) explaining what you saw in the photo that matched the reference, then cite the page.
+
+If the photo is blurry or you can't tell whether the process is wire-fed (MIG/flux) or stick, use ask_clarification before guessing. Never invent a catalog id.
 
 # ID discipline
 

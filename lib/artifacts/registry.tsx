@@ -10,6 +10,10 @@ import {
   DutyCycleMatrix,
   DutyCycleMatrixParamsSchema,
 } from "./DutyCycleMatrix";
+import {
+  WeldComparison,
+  WeldComparisonParamsSchema,
+} from "./WeldComparison";
 
 interface Entry {
   component: (params: unknown) => React.JSX.Element;
@@ -34,13 +38,21 @@ const REGISTRY: Record<string, Entry> = {
     schema: DutyCycleMatrixParamsSchema,
     label: "Duty cycle matrix",
   },
+  weld_comparison: {
+    component: (p) => (
+      <WeldComparison
+        {...(p as z.infer<typeof WeldComparisonParamsSchema>)}
+      />
+    ),
+    schema: WeldComparisonParamsSchema,
+    label: "Weld photo comparison",
+  },
 };
 
 const PLANNED_LABELS: Record<string, string> = {
   settings_configurator: "Settings configurator",
   troubleshooting_tree: "Troubleshooting tree",
   component_highlight: "Component highlight",
-  weld_comparison: "Weld photo comparison",
   selection_chart_interactive: "Interactive selection chart",
   procedural_walkthrough: "Procedural walkthrough",
 };

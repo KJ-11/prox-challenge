@@ -56,6 +56,19 @@ Each interactive artifact (settings configurator, selection chart) addressable a
 
 No PostHog or similar. Not needed for a demo submission.
 
+### Per-entry crops on weld_diagnosis catalog
+
+Each of the 35 `weld_diagnosis` entries points to a full page PNG
+(`page_image_ref`). The schema has a `crop_bbox_normalized` field but it's
+unpopulated. `WeldComparison` renders the full page with a prominent label
+chip and `visual_signature` description, which works but is noisier than a
+tight per-entry crop would be.
+
+Fix: programmatically crop the 6-wide wire grid on p35 and 7-wide stick
+grid on p38 into equal columns; hand-crop the singletons on pp. 36-37,
+39-40. Populate `crop_bbox_normalized` in `weld_diagnosis.json`.
+`WeldComparison` already respects the field if present.
+
 ## Known limitations we're not fixing in MVP
 
 - Visual diagnosis catalog is limited to the 17 conditions labeled in the manual. Real welds exhibit combinations and edge cases beyond these.

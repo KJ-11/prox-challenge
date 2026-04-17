@@ -33,19 +33,6 @@ export const LookupStructuredInput = z.object({
 });
 export type LookupStructuredInput = z.infer<typeof LookupStructuredInput>;
 
-export const DiagnoseWeldPhotoInput = z.object({
-  image_ref: z
-    .string()
-    .describe(
-      "Reference to the user-uploaded image (e.g. an object URL from the browser or a filename the client already provided).",
-    ),
-  context: z
-    .string()
-    .optional()
-    .describe("Any context the user shared alongside the photo."),
-});
-export type DiagnoseWeldPhotoInput = z.infer<typeof DiagnoseWeldPhotoInput>;
-
 export const RenderArtifactInput = z.object({
   type: z
     .enum(ARTIFACT_TYPES)
@@ -120,12 +107,6 @@ export const TOOL_DEFS: AnthropicTool[] = [
     description:
       "Query a structured knowledge table by name with optional shallow filters. Available tables: duty_cycle, specs, polarity, wire_compatibility, selection_chart, troubleshooting, weld_diagnosis, parts_list, safety_symbols. See STRUCTURED TABLES in the catalog for each table's filter keys.",
     input_schema: toJsonSchema(LookupStructuredInput),
-  },
-  {
-    name: "diagnose_weld_photo",
-    description:
-      "Analyze a user-uploaded weld photo and match it against the manual's weld diagnosis catalog. Returns the top match, runner-up, confidence, and fix. Only use when the user has attached a weld photo.",
-    input_schema: toJsonSchema(DiagnoseWeldPhotoInput),
   },
   {
     name: "render_artifact",

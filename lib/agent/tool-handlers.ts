@@ -11,7 +11,6 @@ import {
   LoadChunksInput,
   LoadFiguresInput,
   LookupStructuredInput,
-  DiagnoseWeldPhotoInput,
   RenderArtifactInput,
   AskClarificationInput,
 } from "./tools";
@@ -139,18 +138,6 @@ async function handleLookupStructured(
   return `${header}\n\n${JSON.stringify(filtered, null, 2)}`;
 }
 
-async function handleDiagnoseWeldPhoto(
-  input: unknown,
-): Promise<ToolResultContent> {
-  // Parse input for validation even though we stub the real vision call.
-  DiagnoseWeldPhotoInput.parse(input);
-  return JSON.stringify({
-    status: "not_implemented",
-    message:
-      "Weld photo diagnosis is stubbed in Phase 2 and will be implemented in Phase 5. For now, ask the user to describe the defect they see (porosity? spatter? wavy bead?) and use lookup_structured on weld_diagnosis to surface the closest reference entry.",
-  });
-}
-
 function makeRenderArtifactHandler(ctx: HandlerContext): ToolHandler {
   return async (input) => {
     const { type, params } = RenderArtifactInput.parse(input);
@@ -186,7 +173,6 @@ export function makeHandlers(ctx: HandlerContext): Record<string, ToolHandler> {
     load_chunks: handleLoadChunks,
     load_figures: handleLoadFigures,
     lookup_structured: handleLookupStructured,
-    diagnose_weld_photo: handleDiagnoseWeldPhoto,
     render_artifact: makeRenderArtifactHandler(ctx),
     ask_clarification: makeAskClarificationHandler(ctx),
   };

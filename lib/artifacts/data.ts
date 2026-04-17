@@ -42,3 +42,9 @@ export function lookupFigure(id: string) {
 export function lookupWeldEntry(id: string) {
   return WELD_BY_ID.get(id);
 }
+
+/** Convert "knowledge/pages/.../p008.png" into "/api/knowledge/pages/.../p008.png". */
+export function toKnowledgeUrl(ref: string): string {
+  const cleaned = ref.replace(/^knowledge\//, "");
+  return `/api/knowledge/${cleaned}`;
+}

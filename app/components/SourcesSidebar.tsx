@@ -8,7 +8,7 @@ import type {
   ChatMessageId,
   CollectedSources,
 } from "@/lib/chat/types";
-import { lookupChunk, lookupFigure } from "@/lib/artifacts/data";
+import { lookupChunk, lookupFigure, toKnowledgeUrl } from "@/lib/artifacts/data";
 import { cn } from "@/lib/utils";
 
 export interface SourcesSidebarProps {
@@ -228,12 +228,6 @@ function formatFilters(filters: Record<string, unknown>): string {
   return Object.entries(filters)
     .map(([k, v]) => `${k}: ${JSON.stringify(v)}`)
     .join(" · ");
-}
-
-/** Convert "knowledge/pages/.../p008.png" into "/api/knowledge/pages/.../p008.png". */
-function toKnowledgeUrl(ref: string): string {
-  const cleaned = ref.replace(/^knowledge\//, "");
-  return `/api/knowledge/${cleaned}`;
 }
 
 function findFocusedAssistant(
